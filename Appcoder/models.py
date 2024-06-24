@@ -1,18 +1,17 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
-class Estudiante(models.Model):
-    nombre=models.CharField(max_length=100)
-    apellido=models.CharField(max_length=100)
-    fechaDeNacimiento=models.DateField()
-    dni=models.IntegerField()
 
-class Instrumento(models.Model):
-    Tipo=models.CharField(max_length=100)
-    AñosDePractica=models.IntegerField()
+class Opiniones(models.Model):
+    fecha=models.DateTimeField(auto_now_add=True)
+    titulo=models.CharField(max_length=50)
+    sub=models.CharField(max_length=100)
+    autor=models.CharField(max_length=20)
+    cuerpo=models.TextField(max_length=500)
 
-class CancionAAprender(models.Model):
-    nombreDeCancion=models.CharField(max_length=100)
-    fechaDeLanzamiento=models.DateField()
-    Autor=models.IntegerField()
 
+
+class Avatar(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
+    imagen= models.ImageField( upload_to="avatares",blank=True,null=True)

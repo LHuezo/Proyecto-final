@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Clave sol, clave fa, pentagrama">
+    <meta name="description" content="Aprende como se posicionan las figuras musicales en el pentagrama dependiendo de en que clave esten">
+    <link rel="shortcut icon" href="../imagenes/piano_tiles_icon-icons.com_69217.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Aprende a reconocer una nota por su posicion</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo" src="{% static "imagenes/logo.jpeg" %}" alt="logo">
+        <H1>Posicionamiento de notas</H1>
+    </div>
+        <nav class="navdepaginas">
+            
+                <a href="{% url "index" %}" >Inicio</a>
+                <a href="{% url "significadodefiguras" %}">Significado de figuras</a>
+                <a href="{% url "compas" %}">Compas</a>
+                <a href="{% url "escaladeacordes" %}">Escala de acordes</a>
+        </nav>
+    
+    </header>
+
+    <section data-aos="zoom-in">
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/pentagrama.jpeg" %}" class="imagendepentagrama" alt="imagendepentagrama">
+        </div>
+        <p>Lo que esatamos viendo es un pentagrama, que es la base en el lenguaje de la musica , consta de 5 lineas y 4 espacios en medio de ellas.Donde cada linea y espacio corresponde a una nota dependiendo de la clave en la que se encuentre.El pentagrama de arriba corresponde a las notas que se tocan en la mano derecha y el de abajo corresponde al de la mano izquierda</p>
+    </section>
+    <section data-aos="fade-up-right">
+        <div>
+            <h2>Clave Sol</h2>
+            <img src="{% static "imagenes/clave sol.png" %}" alt="imagen de clave sol">
+            <p>En clave sol las notas empiezan a partir del Do central del piano para la derecha,en la imagen a continuacion indica la posicion de las notas en las lineas y espacios del pentagrama</p>
+            <div class="contenedorDeimagenes">
+            <img src="{% static "imagenes/notasDePiano en clave sol.jpg" %}" alt="imagenesdepianoenclavesol">
+            </div>    
+        </div>
+        <div>
+            <div>
+                <h2>Clave Fa</h2>
+                <img src="{% static "imagenes/clave fa.jpg" %}" alt="imagen de clave fa">
+                <p>En clave fa las notas empiezan a partir del Do central del piano para la izquierda,en la imagen a continuacion indica la posicion de las notas en las lineas y espacios del pentagrama</p>
+                <div class="contenedorDeimagenes">
+                <img src="{% static "imagenes/notasenClavefa.jpeg" %}" alt="imagenesdepianoenclavefa">
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <h2>Si tienes consultas puedes contactarme por estos medios o seguirme en mis redes sociales</h2>
+
+    <div>
+        <div class="iconos-sociales">
+        
+        <a href="https://www.instagram.com/lau7y.019/?next=%2F" target="_blank"><img  alt="Sígueme en Facebook" height="100" width="100" src="{% static "imagenes/logodeig.png" %}" title="Sígueme en instagram"/></a>
+        
+        <a href="https://wa.me/1167844630" target="_blank"><img  alt="Sígueme en Instagram" height="100" width="100" src="{% static "imagenes/logodewhatsapp.png" %}" title="hablame a whatsapp"/></a>
+
+        <a href="https://www.tiktok.com/@lukebones24?_t=8kZVxzJbjAz&_r=1" target="_blank"><img alt="Sígueme en TikTok" height="100" width="100" src="{% static "imagenes/logodetiktok.png" %}" title="Sígueme en TikTok"/></a>
+        </div>
+    </div>
+        
+        
+        
+</footer>
+</html>

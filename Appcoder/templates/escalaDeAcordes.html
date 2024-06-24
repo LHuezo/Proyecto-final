@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="acordes Mayores , acordes menores , acorde do Mayor, acorde do Menor, posicion">
+    <meta name="description" content="Aprende como posicinar tus manos para tocar acordes mnores y mayores">
+    <link rel="shortcut icon" href="../imagenes/piano_tiles_icon-icons.com_69217.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Aprende a como posicinar tus manos para tocar acordes</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo"  src="{% static "imagenes/logo.jpeg" %}" alt="">
+        <h1>Escala De Acordes</h1>
+        </div>
+    <nav class="navdepaginas">
+        
+        <a href="{% url "index" %} ">Inicio</a>
+        <a href="{% url "posicionamientodenotas" %}">Posicionamiento de notas</a>
+        <a href="{% url "compas" %} ">Compas</a>
+        <a href="{% url "significadodefiguras" %}">Significado de Figuras</a>
+    
+    </nav>
+
+    
+</header>
+    <p>Existen varios acordes que leer en las partituras, aqui apreneremos a identificar los menores y mayores</p>
+    <section data-aos="fade-down-right">
+    <h2>Acordes Mayores</h2>
+    <p>Los acordes mayoresse cuentan con primero dos tonos seguidos,un tono y por ultimo un semitono. En resemunen primero tres teclas a la derecha y luego 3</p>
+    <div class="contenedorDeimagenes">
+    <img src=" {% static "imagenes/acordedoMayor.jpg" %} " alt="ImagendeDoMayor">
+    </div>
+    <p>En la imagen que se muestra, podemos ver un acorde de Do mayor. Como vemos empezamos a partir del do luego nos movemos 2 tonos a la derecha (4 teclas) y despues 1 tono y medio (2 teclas y una mas)
+    </p>
+    </section>
+    <section data-aos="fade-down-right">
+    <h2>Acordes Menores</h2>
+    <p>Los acordes menores se cuentan con primero 1 tono y medio seguidos , y luego dos tonos. En resemunen primero tres teclas a la derecha y luego 4.Basicamente es como tocar un acorde mayor pero el orden de las teclas es alreves</p>
+    <div class="contenedorDeimagenes">
+    <img src="{% static "imagenes/acordedoMenor.jpg" %} " alt="ImagendeDoMenor">
+    </div>
+    <p>En la imagen que se muestra, podemos ver un acorde de Do menor. Como vemos empezamos a partir del do luego nos movemos un tono y medio a la derecha (2 teclas y una mas) y despues 2 tonos (4 teclas)
+    </p>
+    </section>
+    <section data-aos="fade-down-right">
+        <h3>Conclusion</h3>
+        <p>Para tocar acordes mayores y menores se debe seguir el patron de teclas mencionado anteriormente </p>
+    </section>
+    <section data-aos="fade-down-right">
+        <h2>Posicion de los dedos</h2>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/NumerosDePartituras.jpg" %} " alt="imagenDeLOsnumerosenpartituras"><img src="{% static "imagenes/numerosdededos.jpg" %}" class="posicionDeDedos" alt="NumerosDeLosdedos">
+        </div>
+        <p>A menudo encontraras en las partituras algunas notas acompañadasde un numero , dicho numero corresponde a un dedo, dependiendo de en que pentagrama este puede ser de la mano izquierda o derecha y dependiendo de la mano, el orden ira desde el dedo pulgar siendo el primero hasta el meñique siendo el quinto </p>
+    </section>
+
+</body>
+<footer>
+    <h2>Si tienes consultas puedes contactarme por estos medios o seguirme en mis redes sociales</h2>
+
+    <div>
+        <div class="iconos-sociales">
+        
+        <a href="https://www.instagram.com/lau7y.019/?next=%2F" target="_blank"><img  alt="Sígueme en Facebook" height="100" width="100" src="{% static "imagenes/logodeig.png" %} " title="Sígueme en instagram"/></a>
+        
+        <a href="https://wa.me/1167844630" target="_blank"><img  alt="Sígueme en Instagram" height="100" width="100" src="{% static "imagenes/logodewhatsapp.png" %}" title="hablame a whatsapp"/></a>
+
+        <a href="https://www.tiktok.com/@lukebones24?_t=8kZVxzJbjAz&_r=1" target="_blank"><img alt="Sígueme en TikTok" height="100" width="100" src="{% static "imagenes/logodetiktok.png" %}" title="Sígueme en TikTok"/></a>
+        </div>
+    </div>
+        
+        
+        
+</footer>
+</html>

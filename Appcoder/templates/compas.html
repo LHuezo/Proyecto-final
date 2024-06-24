@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="compas24,compas34,compas44,compas68,compas">
+    <meta name="description" content="Aprende sobre el significado de los compases del principio del pentagrama">
+    <link rel="shortcut icon" href="../imagenes/piano_tiles_icon-icons.com_69217.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Comprende el concepto del compas para especificar cuantos pulsos hay en cada uno</title>
+</head>
+<body>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo" src="{% static "imagenes/logo.jpeg" %}" alt="logo">
+        <H1>Compases</H1>
+        </div>
+        <nav class="navdepaginas">
+                <a href="{% url "index" %}">Inicio</a>
+                <a href="{% url "significadodefiguras" %}">Significado de figuras</a>
+                <a href="{% url "posicionamientodenotas" %}">Posicionamiento de notas</a>
+                <a href="{% url "escaladeacordes" %}">Escala de acordes</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="contenedorDeimagenes" >
+        <img src="{% static "imagenes/compas.jpg" %} " alt="imagendecompas4/4">
+        </div>
+        <p>A menudo al principio de las partituras,al lado del simbolo de la la clave sol o fa, veremos 2 numeros que asemeja una fraccion donde el numerdor y el denominador indican cosas diferentes</p>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          ¿Que indican esos numeros?
+        </button>
+        <ul class="dropdown-menu">
+          <li>El numerador indican la cantidad de figuras o tiempos que hay por compas </li>
+          <li>El denominador indica el valor de esos tiempos o figuras en relacion a la figura redonda</li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="carrusel-Compas ">
+        <h2>Ejemplos</h2>
+        <p>Para entender mejor el concepto del compas les dejamos algunos ejemplos explicados</p>
+        <div class="d-none d-md-block">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="{% static "imagenes/compas24.jpeg" %} " class="imagenDeSlide d-block w-100" alt="imagendecompas24" id="primeraimagendeslide">
+                <div class="carousel-caption d-none d-md-block">
+                <p class="texto-Slide">Se refeiere a que por compas habra dos negras.¿Por que negras? por que el denominador es un 4 y como el denominador designa una figura o tiempo en relacion a la figura rendonda, seria una negra ya que 4 negras forman una blanca</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="{% static "imagenes/compas34.jpeg" %}" class="imagenDeSlide" alt="imagendecompas34">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                    <p class="texto-Slide">Se refiere a que habra por compas 3 negras, son negras ya que el denominado es 4</p>
+                
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static "imagenes/compas44.jpeg" %} " class="imagenDeSlide" alt="imagendecompas44">
+                <div class="carousel-caption d-none d-md-block">
+                  <p class="texto-Slide">habra 4 negras por compas</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static "imagenes/compas68.jpeg" %} " class="imagenDeSlide" alt="imagendecompas68">
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="texto-Slide">Se refiere a que habra 6 corcheas por compas, por que 8 corcheas equivalen a 4 tiempos </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+          <div  class="d-block d-md-none">
+          <div class="contenedorDeimagenes" >
+            <img src="{% static "imagenes/compas24.jpeg" %} " class="" alt="imagendecompas24">
+            <p >Se refeiere a que por compas habra dos negras.¿Por que negras? por que el denominador es un 4 y como el denominador designa una figura o tiempo en relacion a la figura rendonda, seria una negra ya que 4 negras forman una blanca</p>
+          </div>
+          <div class="contenedorDeimagenes"  >
+            <img src="{% static "imagenes/compas34.jpeg" %} " class="" alt="imagendecompas34">
+            <p >Se refiere a que habra por compas 3 negras, son negras ya que el denominado es 4</p>
+          </div>
+          <div class="contenedorDeimagenes" >
+            <img src="{% static "imagenes/compas44.jpeg" %} " class="" alt="imagendecompas44">
+            <p >habra 4 negras por compas</p>
+          </div>
+          <div class="contenedorDeimagenes" >
+            <img src="{% static "imagenes/compas68.jpeg" %}" class="" alt="imagendecompas68">
+            <p >Se refiere a que habra 6 corcheas por compas, por que 8 corcheas equivalen a 4 tiempos </p>
+          </div>
+        </div>
+    </section>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+<footer>
+  <h2>Si tienes consultas puedes contactarme por estos medios o seguirme en mis redes sociales</h2>
+
+  <div>
+      <div class="iconos-sociales">
+      
+      <a href="https://www.instagram.com/lau7y.019/?next=%2F" target="_blank"><img  alt="Sígueme en Facebook" height="100" width="100" src="{% static "imagenes/logodeig.png" %}" title="Sígueme en instagram"/></a>
+      
+      <a href="https://wa.me/1167844630" target="_blank"><img  alt="Sígueme en Instagram" height="100" width="100" src="{% static "imagenes/logodewhatsapp.png" %}" title="hablame a whatsapp"/></a>
+
+      <a href="https://www.tiktok.com/@lukebones24?_t=8kZVxzJbjAz&_r=1" target="_blank"><img alt="Sígueme en TikTok" height="100" width="100" src="{% static "imagenes/logodetiktok.png" %}" title="Sígueme en TikTok"/></a>
+      </div>
+  </div>
+      
+      
+      
+</footer>
+</html>

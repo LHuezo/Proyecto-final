@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="negra,blanca,corchea,semicorchea,Puntillo,redonda,silencioDeBlanca,silencioDeCorchea,silencioDeRedonda,silencioDeSemicorchea">
+    <meta name="description" content="Te enseñmos a como identificar las figuras musicales con imagenes respectivas de ellas y sus silencios mas el puntillo">
+    <link rel="shortcut icon" href="{% static "imagenes/piano_tiles_icon-icons.com_69217.ico" %}" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Aprende sobre las figuras musicales y su significado</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo" src="{% static "imagenes/logo.jpeg" %}"  alt="logo">
+        <H1>Las Figuras y su significado</H1>
+    </div>
+        <nav class="navdepaginas">
+           
+                <a href="{% url "index" %}">Inicio</a>
+                <a href="{% url "posicionamientodenotas" %}">Posicionamiento de notas</a>
+                <a href="{% url "compas" %}">Compas</a>
+                <a href="{% url "escaladeacordes" %}">Escala de acordes</a>
+    
+        </nav>
+    
+    </header>
+
+    <Section data-aos="fade-right">
+        <p>La figuras musicales son simbolos con los cuales expresan el tiempo que dura una nota del alfabeto musical, y cada una posee una posee otra figura que corresponde a su silencio, osea sera una nota en la que no se tocara por el tiempo que corresponda a esa nota silenciosa.Entre las notas y su silencio podemos encontrar :</p>
+        <H2>Redonda</H2>
+        <div class="contenedorDeimagenes" >
+        <img src="{% static "imagenes/redonda.png" %}" alt="imagenderedonda">
+        <p>La <b>Redonda</b> es una figura que dura 4 tiempos</p>
+        </div>
+        <h3>Silencio e Redonda</h3>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/silencioDeRedonda.png" %}" alt="imagendesilencioderedonda">
+        <p>Como esta figura coresponde a un silencio de una figura redonda, su silencio sera tambien de 4 tiempos</p>
+    </div>
+    </Section>
+    <Section data-aos="fade-right">
+        <H2>Blanca</H2>
+        <div  class="contenedorDeimagenes">
+        <img src="{% static "imagenes/blanca.png" %}" alt="imagendeblanca">
+        <p>La <b>Blanca</b> es una figura que dura 2 tiempos</p>
+        </div>
+        <h3>Silencio de Blanca</h3>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/silencioDeBlanca.png" %}" alt="imagendesilenciodeblanca">
+        <p>Como esta figura coresponde a un silencio de una figura Blanca, su silencio sera tambien de 2 tiempos</p>
+    </div>
+    </Section>
+    <Section data-aos="fade-right">
+        <H2>Negra</H2>
+        <div class="contenedorDeimagenes">
+        <img src= "{% static "imagenes/negra.png" %}"  alt="imagendeNegra">
+        <p>La <b>Negra</b> es una figura que dura 1 tiempos</p>
+        </div>
+        <h3>Silencio de Negra</h3>
+        <div class="contenedorDeimagenes">
+        <img src= "{% static "imagenes/silencioDeBlanca.png" %}"  alt="imagendesilenciodenegra">
+        <p>Como esta figura coresponde a un silencio de una figura Negra, su silencio sera tambien de 1 tiempo</p>
+    </div>
+    </Section>
+    <Section data-aos="fade-right">
+        <H2>Corchea</H2>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/corchea.png" %}" alt="imagendecorchea">
+        <p>La <b>Corchea</b> es una figura que dura 1/2 tiempos</p>
+        </div>
+        <h3>Silencio de Corchea</h3>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/silencioDeCorchea.png" %}" alt="imagendesilenciodecorchea">
+        <p>Como esta figura coresponde a un silencio de una figura Corchea, su silencio sera tambien de 1/2 de tiempo</p>
+    </div>
+    </Section>
+    <Section data-aos="fade-right">
+        <H2>Semicorchea</H2>
+        <div  class="contenedorDeimagenes">
+        <img src="{% static "imagenes/semicorchea.png" %}" alt="imagendesemicorchea">
+        <p>La <b>Semicorchea</b> es una figura que dura 1/4 tiempos</p>
+        </div>
+        <h3>Silencio de Corchea</h3>
+        <div  class="contenedorDeimagenes">
+        <img src="{% static "imagenes/silencioDeSemicorchea.jpg" %}" alt="imagendesilenciodesemicorchea">
+        <p>Como esta figura coresponde a un silencio de una figura Semicorchea, su silencio sera tambien de 1/4 de tiempo</p>
+    </div>
+    </Section>
+    <Section data-aos="fade-right">
+        <H2>Puntillo</H2>
+        <p>Habra ocasiones en que las figuras vengan acompañadas de un punto a su lado el cual le suma a su tiempo la mitad de su valor,como ejemplos tenemos:</p>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/blancaconpuntillo.png" %}" alt="imagendeblancaconpuntillo">
+        <p>La <b>blanca con Puntillo</b> es una figura que dura 3 tiempos ya que la blanca al durar 2 tiempos se le se sumara uno mas ya que la mitad de su valor es 1 </p>
+        </div>
+        <div class="contenedorDeimagenes">
+        <img src="{% static "imagenes/negraconpuntillo.png" %}" alt="imagendenegraconpuntillo">
+        <p>La <b>negra con Puntillo</b> es una figura que dura 1/2 de tiempo ya que la negra al durar 1 y medio de tiempo ya que la mitad de su valor es medio tiempo</p>
+    </div>
+    </Section>
+    
+</body>
+<footer>
+    <h2>Si tienes consultas puedes contactarme por estos medios o seguirme en mis redes sociales</h2>
+
+    <div>
+        <div class="iconos-sociales">
+        
+        <a href="https://www.instagram.com/lau7y.019/?next=%2F" target="_blank"><img  alt="Sígueme en Facebook" height="100" width="100" src="{% static "imagenes/logodeig.png" %}" title="Sígueme en instagram"/></a>
+        
+        <a href="https://wa.me/1167844630" target="_blank"><img  alt="Sígueme en Instagram" height="100" width="100" src="{% static "imagenes/logodewhatsapp.png" %}" title="hablame a whatsapp"/></a>
+
+        <a href="https://www.tiktok.com/@lukebones24?_t=8kZVxzJbjAz&_r=1" target="_blank"><img alt="Sígueme en TikTok" height="100" width="100" src="{% static "imagenes/logodetiktok.png" %}" title="Sígueme en TikTok"/></a>
+        </div>
+    </div>
+        
+        
+        
+</footer>
+</html>

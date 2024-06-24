@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Da tu Opinion</title>
+</head>
+<body>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo"  src="{% static "imagenes/logo.jpeg" %}" alt="">
+        <h1>Danos tu Opinion</h1>
+        </div>
+    </header>
+    <div >
+        {% if miFormulario.errors  %}
+        <p style="color: brown;">Los datos esperados no son los correctos</p>
+        {% endif %}
+
+        <form action="{% url "opinionformulario" %}" method="post">{% csrf_token %}
+            {{miFormulario.as_p}}
+            <button type="submit">Enviar tu opinion</button>
+        </form>
+
+    </div>
+</body>
+</html>

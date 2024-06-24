@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Opiniones</title>
+</head>
+<body>
+    <header class="headerdePaginas">
+        <div class="logo-titulo">
+        <img class="logo"  src="{% static "imagenes/logo.jpeg" %}" alt="">
+        <h1>Opiniones</h1>
+        </div>
+    </header>
+    <div >
+        {% for o in opiniones %}
+        <li>opinion de {{o.autor}}</li>
+        <button><a href="{% url "eliminacion" o.id %}">Eliminar</a></button>
+        {% endfor %}
+    </div>
+</body>
+</html>
