@@ -32,25 +32,28 @@ def danos_tu_opinion(req):
 
 def opinion_formulario(req):
 
-     if req.method == 'post':
-
+     if req.method == "POST":
           miFormulario = opinionformulario(req.POST)
 
-          if miFormulario.is_valid():
+          print(miFormulario)
+               
+          data=miFormulario.cleaned_data
 
-               miFormulario.save()
+          miopinion=Opiniones (titulo=data["titulo"],sub=data["sub"],autor=data["autor"],cuerpo=data["cuerpo"])
+          miopinion.save()
 
-               return render(req, "opiniones.html")
+          return render(req, "index.html",{})
     
      else:
       
           miFormulario = opinionformulario()
+          contexto={"miFormulario":miFormulario}
 
-          return render(req ,"datuopinion.html", {"miFormulario":miFormulario})
+          return render(req ,"datuopinion.html", contexto)
   
-def opiniones(req):
-
-    return render(req,"Opiniones.html",{})
+def verOpinion(req,id):
+     opinion = Opiniones.objects.get(id=id)
+     return render(req,"opiniondepersona.html",{"opinion":opinion})
 
 def leerOpiniones(req):
     

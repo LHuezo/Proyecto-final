@@ -2,7 +2,7 @@
 
 from django.urls import path
 from Proyectopara3erentrega.views import saludo
-from Appcoder.views import index,significado_de_figuras,posicionamiento_de_notas,compas,escala_de_acordes,leerOpiniones,eliminar_opinion,opinion_formulario
+from Appcoder.views import index,significado_de_figuras,posicionamiento_de_notas,compas,escala_de_acordes,leerOpiniones,eliminar_opinion,opinion_formulario,verOpinion
 
 urlpatterns = [
     path('saludar/', saludo),
@@ -13,5 +13,6 @@ urlpatterns = [
     path("chord scale/",escala_de_acordes,name="escaladeacordes"),
     path("route pages/",leerOpiniones,name="lasopiniones"),
     path("eliminaropinion/<int:id>",eliminar_opinion,name="eliminacion"),
-    path("formulario/",opinion_formulario,name="opinionformulario")
+    path("formulario/",opinion_formulario,name="opinionformulario"),
+    path("opinionpuntual/<int:id>",verOpinion,name="veropinion")
  ]

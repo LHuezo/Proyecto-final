@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Opiniones(models.Model):
-    fecha=models.DateTimeField(auto_now_add=True)
     titulo=models.CharField(max_length=50)
     sub=models.CharField(max_length=100)
     autor=models.CharField(max_length=20)

@@ -16,9 +16,12 @@
     </header>
     <div >
         {% for o in opiniones %}
-        <li>opinion de {{o.autor}}</li>
-        <button><a href="{% url "eliminacion" o.id %}">Eliminar</a></button>
+        <li>opinion de {{o.autor}}</li> {% csrf_token %}
+        <button><a href="{% url "eliminacion" o.id %}">Eliminar</a></button><button><a href="{% url "veropinion" o.id %}">Ver opinion</a></button>
         {% endfor %}
+    </div>
+    <div>
+        <a href="{% url "opinionformulario" %}">Danos tu opinion</a>
     </div>
 </body>
 </html>
