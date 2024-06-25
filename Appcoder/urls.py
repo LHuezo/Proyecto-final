@@ -3,7 +3,7 @@
 from django.urls import path
 from Proyectopara3erentrega.views import saludo
 from Appcoder.views import inicio,significado_de_figuras,posicionamiento_de_notas,compas,escala_de_acordes,leerOpiniones,eliminar_opinion,opinion_formulario,verOpinion,loginuser,registeruser
-
+from django.contrib.auth.views import LogoutView
 urlpatterns = [
     path('saludar/', saludo),
     path("indexlogin/",loginuser,name="indexlogin"),
@@ -16,5 +16,6 @@ urlpatterns = [
     path("route pages/",leerOpiniones,name="lasopiniones"),
     path("eliminaropinion/<int:id>",eliminar_opinion,name="eliminacion"),
     path("formulario/",opinion_formulario,name="opinionformulario"),
-    path("opinionpuntual/<int:id>",verOpinion,name="veropinion")
+    path("opinionpuntual/<int:id>",verOpinion,name="veropinion"),
+    path("logout/",LogoutView.as_view(template_name="index.html"),name="logout")
  ]

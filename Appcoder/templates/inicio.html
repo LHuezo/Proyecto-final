@@ -25,11 +25,21 @@
         <h1>Aprende lo basico en lectura de partituras con Basics</h1>
         </div>
     </header>
+    <div>
+        {% if user.is_authenticated %}
+        <p>Hola   </p>
+        <form action="{% url "logout" %}" method="post">{% csrf_token %}
+        <button type"submit">Logout</button>
+    </form>
+    {% endif %}
+    <a href="{% url "lasopiniones" %}">Observa las opiniones de distintos usuarios</a>
+</div>
+    
 
     <section class="Notas">
         <div>
         <p>
-            Hola {{nombre}} y muchas gracias por elegir Basicss como opcion para aprenedr a leer las partituras y dar tus primeros pasos para ser un pianista.
+            Muchas gracias por elegir Basicss como opcion para aprenedr a leer las partituras y dar tus primeros pasos para ser un pianista.
             Como primer paso te proporcionamos la siguiente imagen para que identificas la notas en tu piano
         </p>
         </div>

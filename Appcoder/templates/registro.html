@@ -18,8 +18,7 @@
         <form action="{% url "registro" %}" method="post">{% csrf_token %}
 
            {{form.as_p}}
-           {{mensaje1}}
-           {{mensaje2}}
+    
             <br>
             <button type="submit">Refistrarse</button>
 
