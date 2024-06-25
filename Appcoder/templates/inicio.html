@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Significado de figuras, Posicionamiento de notas, Compas, Escala de acordes">
+    
+    <meta name="description" content="Aprende a reconocerlas figuras musicales, como posicionarlas en tu piano, como tocar tanto acordes mayores y menoresy reconocer un compas">
+    <meta property="og:image" content="https://basicspartituras.netlify.app/imagenes/logo.jpeg">
+    <meta property="og:description" content="Aprende a reconocerlas figuras musicales, como posicionarlas en tu piano, como tocar tanto acordes mayores y menoresy reconocer un compas">
+    <meta property="og:url" content="https://basicspartituras.netlify.app/">
+    <meta property="og:title" content="Aprende lo basico en lectura de partituras con Basics">
+    <link rel="shortcut icon" href="{% static "imagenes/piano_tiles_icon-icons.com_69217.ico" %}" type="image/x-icon">
+    <title>Aprende lo basico en lectura de partituras con Basics</title>
+    <link rel="stylesheet" href= "{% static "css/style.css" %}">
+</head>
+<body>
+    <header class="headerindex">
+        <div>
+        <img class="logo"  src="{% static "imagenes/logo.jpeg" %}" alt="imagen de logo">
+        </div> 
+        <div>
+        <h1>Aprende lo basico en lectura de partituras con Basics</h1>
+        </div>
+    </header>
+
+    <section class="Notas">
+        <div>
+        <p>
+            Hola {{nombre}} y muchas gracias por elegir Basicss como opcion para aprenedr a leer las partituras y dar tus primeros pasos para ser un pianista.
+            Como primer paso te proporcionamos la siguiente imagen para que identificas la notas en tu piano
+        </p>
+        </div>
+        <div class="contenedorDeimagenes">
+            <img class="notas-En-Piano" src="{% static "imagenes/notas-alteradas-en-el-piano.jpg" %}" alt="Notas En El Paino">
+        </div>
+        <div>
+            <p>Como muestra la imagen las teclas blancas indican las notas naturales, mientras que las negras indican una nota <strong>sostenida</strong> o una nota <strong>bemol</strong>
+            </p>
+        </div>
+        <div>
+            <p>Cabe destacar que habra casos en que las notas natruales no sean escritas como Do Re Mi Fa Sol La si Do, sino que se las leera como letras comunes Desde el Do como una C hasta el Si como una B ,como se se les indicara a continuacion</p>
+
+            <ol>
+                <li>Do = C</li>
+                <li>Re = D</li>
+                <li>Mi = E</li>
+                <li>Fa = F</li>
+                <li>Sol = G</li>
+                <li>La = A</li>
+                <li>Si = B</li>
+            </ol>
+            <p>Como siguiente paso te invitamos a que revises las siguientes secciones en el orden indicado para que continues tu aprendizaje</p>
+
+            <!-- Aqui hay un componente de bootstrap, un dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Orden recomendado para principiantes
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url "significadodefiguras" %}">1.Significado de figuras</a></li>
+                  <li><a class="dropdown-item" href="{% url "posicionamientodenotas" %}">2.Posicionamiento de notas</a></li>
+                  <li><a class="dropdown-item" href="{% url "compas" %}">3.Compas</a></li>
+                  <li><a class="dropdown-item" href="{% url "escaladeacordes" %}">4.Escala de acordes</a></li>
+                </ul>
+              </div>
+        </div>
+        </section>
+
+        <Section id="navegadorPrincipal" class="grid-container">
+                <div class="grid-item">
+                <a href="{% url "significadodefiguras" %}">
+                <img class="imagennav negra" src= "{% static "imagenes/negra.png" %}" alt="imagendenegra">
+                <h2>Significado de figuras</h2>
+                <p>Aprende el significado de las figuras</p>
+                </a>
+                </div>
+                <div class="grid-item">
+                <a href="{% url "posicionamientodenotas" %}">
+                <img class="imagennav" src= "{% static "imagenes/claveSolyfa.jpg" %}"  alt="imagenDeClaves">
+                <h2>Posicionamiento de notas</h2>
+                <p>Aprende sobre la diferencia de posicion de notas en las claves</p>
+                </a>
+                </div>
+                <div class="grid-item">
+                <a href="{% url "compas" %}">
+                <img class="imagennav" src= "{% static "imagenes/compas.jpg" %}" alt="imagendecompas4/4">
+                <h2>Compas</h2>
+                <p>Descubre sobre el concepto del compas de un pentagrama</p>
+                </a>
+                </div>
+                <div class="grid-item">
+                <a href="{% url "escaladeacordes" %}">
+                <img class="imagennav" src="{% static "imagenes/domayor.jpeg" %}" alt="imagnededomayor">
+                <h2>Escala de acordes</h2>
+                <p>Descubre como tocar tanto acordes mayores o menores </p>
+                </a>
+            </div>
+        </Section>
+    </section>
+
+    
+</body>
+<footer>
+    <h2>Si tienes consultas puedes contactarme por estos medios o seguirme en mis redes sociales</h2>
+
+    <div>
+        <div class="iconos-sociales">
+        
+        <a href="https://www.instagram.com/lau7y.019/?next=%2F" target="_blank"><img  alt="Sígueme en Facebook" height="100" width="100" src= "{% static "imagenes/logodeig.png" %}" title="Sígueme en instagram"/></a>
+        
+        <a href="https://wa.me/67844630" target="_blank"><img  alt="Sígueme en Instagram" height="100" width="100" src="{% static "imagenes/logodewhatsapp.png" %}" title="hablame a whatsapp"/></a>
+
+        <a href="https://www.tiktok.com/@lukebones24?_t=8kZVxzJbjAz&_r=1" target="_blank"><img alt="Sígueme en TikTok" height="100" width="100" src="{% static "imagenes/logodetiktok.png" %}" title="Sígueme en TikTok"/></a>
+        </div>
+    </div>
+        
+        
+        
+</footer>
+</html>

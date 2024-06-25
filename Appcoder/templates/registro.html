@@ -5,30 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <title>Iniciar sesion</title>
+    <title>Registrate</title>
 </head>
 <body>
     <header class="headerdePaginas">
         <div class="logo-titulo">
         <img class="logo"  src="{% static "imagenes/logo.jpeg" %}" alt="">
-        <h1>Inicia Sesion</h1>
+        <h1>Registrate en Basics</h1>
         </div>
     </header>
     <div >
-        <form action="{% url "indexlogin" %}" method="post">{% csrf_token %}
+        <form action="{% url "registro" %}" method="post">{% csrf_token %}
 
-            {{form.as_p}}
-
-            
-            {{ mensaje }}
+           {{form.as_p}}
+           {{mensaje1}}
+           {{mensaje2}}
             <br>
-            <button type="submit">Iniciar sesion</button>
-
-            <p>No tienes un usuario?
-                <br>
-                Registrate ahora mismo
-            </p>
-            <button><a href="{% url "registro" %}">Registrate</a></button>
+            <button type="submit">Refistrarse</button>
 
 
         </form>
